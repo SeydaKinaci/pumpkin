@@ -14,12 +14,13 @@ public class TicTacToeView extends Application {
     private Button[][] buttons = new Button[3][3];
     private TicTacToeController controller;
     private TicTacToeModel model;
+    private Stage stage;
 
     @Override
     public void start(Stage primaryStage) {
         model = new TicTacToeModel();
         controller = new TicTacToeController(this, model);
-
+        stage =  primaryStage;
         VBox root = new VBox();
         root.getChildren().add(scoreLabel);
 
